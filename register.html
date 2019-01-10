@@ -69,12 +69,12 @@
 
             <div>
                 <label for="">Date of birth</label>
-                <input type="date">
+                <input type="date" name="bdaymonth">
             
             </div>
             <div>
                 <label for="">Email</label>
-                <input type="email">
+                <input type="email" name="emailaddress">
             </div>
 
             <div>
@@ -202,8 +202,8 @@
                     <option value="Akoko south-West">Akoko south-West</option>
                     <option value="Akure North">Akure North</option>
                     <option value="Akure South">Akure South</option>
-                    <option value="">Ese Odo</option>
-                    <option value="">Idanre</option>
+                    <option value="Ese Odr">Ese Odo</option>
+                    <option value="Idanre">Idanre</option>
                     <option value="">Ifedore</option>
                     <option value="">Ilaje</option>
                     <option value="">Ile Oluji/Okeigbo</option>
@@ -220,7 +220,32 @@
 
             <div>
                 <label for="">Area of Expertise</label>
+                <select name="" id="expertise">
+                    <option value="">Select</option>
+                    <option value="">Plumbing</option>
+                    <option value="">Painting</option>
+                    <option value="">Carpentry</option>
+                    <option value="">Bricklaying</option>
+                    <option value="">Electrical works and Installation</option>
+                    <option value="">Food service</option>
+                    <option value="">Fummigation and pest control</option>
+                    <option value="">Gardening</option>
+                    <option value="">Interior Design</option>
+                    <option value="">Tiling</option>
+                    <option value="">Home tutor</option>
+                    <option value="">Event Ushers</option>
+                    <option value="">Researcher</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Others? Please specify</label>
                 <input type="text">
+            </div>
+
+            <div>
+                <label for="">Years of Experience</label>
+                <input type="number">
             </div>
 
             <div>
@@ -239,13 +264,13 @@
             </div>
 
             <div>
-                <label for="">Upload Picture</label>
-                <input type="text">
+                <label for="pictureUpload">Upload Picture</label>
+                <input type="file">
             </div>
 
             <div>
-                <label for="" >Upload ID</label>
-                <input type="picture">
+                <label for="idUpload" >Upload ID</label>
+                <input type="file">
             </div>
             <div>
                 <label for="">Password</label>
