@@ -44,23 +44,23 @@
         
         <form action="post" class="workers-form">
             <div class="form-group">
-                <label for="">Surname</label>
-                <input type="text">
+                <label for="surname">Surname</label>
+                <input type="text" required>
             </div>
             
             <div class="form-group">
-                <label for="">First name</label>
+                <label for="first-name">First name</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="other-names">Other names</label>
                 <input type="text">
             </div>
 
             <div class="form-group">
-                <label for="">Other names</label>
-                <input type="text">
-            </div>
-
-            <div class="form-group">
-                <label for="gender" >Gender</label>
-                <select name="" id="">
+                <label for="gender">Gender</label>
+                <select name="" id="" required>
                     <option value="">Select</option>
                     <option value="">Male</option>
                     <option value="">Female</option>
@@ -69,33 +69,33 @@
 
             <div class="form-group">
                 <label for="dbirth">Date of birth</label>
-                <input type="date" name="bdaymonth">
+                <input type="date" name="bdaymonth" required>
             
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="emailaddress">
+                <input type="email" name="emailaddress" required>
             </div>
 
             <div class="form-group">
                 <label for="number">Phone number</label>
-                <input type="number" maxlength="11">
+                <input type="number" maxlength="11" required>
             </div>
 
             <div class="form-group">
                 <label for="">Contact Address</label>
-                <input type="text" >
+                <input type="text" required>
             </div>
 
             <div class="form-group">
                 <label for="">Permanent Address</label>
-                <input type="text">
+                <input type="text" required>
             </div>
 
             <div class="form-group">
                 <label for="">Marital status</label>
-                <select id="Marital-status" name="status">
+                <select id="Marital-status" name="status" required>
                     <option value="none">Select</option>
                     <option value="single">Single</option>
                     <option value="engaged">Engaged</option>
@@ -106,7 +106,7 @@
 
             <div class="form-group">
                 <label for="">State of origin</label>
-                <select id="statee" name="state">
+                <select id="statee" name="state" required>
                     <option value="none">Select</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
@@ -150,7 +150,7 @@
 
             <div class="form-group">
                 <label for="">State of residence</label>
-                <select id="statee" name="state">
+                <select id="statee" name="state" required>
                         <option value="none">Select</option>
                         <option value="Abia">Abia</option>
                         <option value="Adamawa">Adamawa</option>
@@ -195,7 +195,7 @@
 
             <div class="form-group">
                 <label for="" id="LGA" name="LG">Local Government Area</label>
-                <select name="LGA" id="LG">
+                <select name="LGA" id="LG" required>
                     <option value="none">Select</option>
                     <option value="Akoko North-East">Akoko North-East</option>
                     <option value="Akoko North-West">Akoko North-West</option>
@@ -221,7 +221,7 @@
 
             <div class="form-group">
                 <label for="">Area of Expertise</label>
-                <select name="" id="expertise">
+                <select name="" id="expertise" required>
                     <option value="">Select</option>
                     <option value="">Plumbing</option>
                     <option value="">Painting</option>
@@ -246,7 +246,7 @@
 
             <div class="form-group">
                 <label for="">Years of Experience</label>
-                <input type="number">
+                <input type="number" required>
             </div>
 
             <div class="form-group">
@@ -261,7 +261,7 @@
 
             <div class="form-group">
                 <label for="">Bank Name</label>
-                <select name="bank-name" id="">
+                <select name="bank-name" id="" required>
                     <option value="">Select</option>
                     <option value="">Access Bank Plc</option>
                     <option value="">Citibank Nigeria Limited </option>
@@ -290,33 +290,33 @@
 
             <div class="form-group">
                 <label for="">Account Number</label>
-                <input type="number" maxlength="11">
+                <input type="number" maxlength="11" required>
             </div>
 
 
 
             <div class="form-group">
                 <label for="">Bank Verification Number</label>
-                <input type="text" maxlength="11">
+                <input type="text" maxlength="11" required>
             </div>
 
             <div class="form-group">
                 <label for="pictureUpload">Upload Picture</label>
-                <input type="file">
+                <input type="file" required>
             </div>
 
             <div class="form-group">
-                <label for="idUpload" >Upload ID</label>
-                <input type="file">
+                <label for="idUpload">Upload ID</label>
+                <input type="file" required>
             </div>
             <div class="form-group">
                 <label for="">Password</label>
-                <input type="password">
+                <input type="password" required>
             </div>
 
             <div class="form-group">
                 <label for="">Confirm Password</label>
-                <input type="password">
+                <input type="password" required>
             </div>
 
         
