@@ -30,6 +30,39 @@ body{
  .form{
    margin-left: 40px;
    margin-bottom: 30px;
-   padding-left: 30px;
+   padding: 20px;
    line-height: 1.5em;
+   font-weight: 200;
  }
+
+ .form label{
+    display: block;
+ }
+
+ .form input{
+    padding: 8px;
+    width: 80%;
+ }
+
+ 
+ .button{
+   background-color: rgba(247, 115, 7, 0.979);
+   color: #fff;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+ }
+
+ .button:hover{
+    background: black;
+    color: white;
+
+ }
+
+ .form-group{
+    float: left;
+    width: 100%;
+    
+ }
+
+ 
