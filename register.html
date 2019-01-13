@@ -42,55 +42,62 @@
 
     <div class="form">
         
-        <form action="post" class="workers-form">
+        <form action="index.html" method="post" onsubmit="return validate()" name="vform">
             <div class="form-group">
                 <label for="surname">Surname</label>
-                <input type="text" required>
+                <input type="text" name="surname" required>
+                <div id="surname_error" class="val_error"></div>
             </div>
             
             <div class="form-group">
                 <label for="first-name">First name</label>
-                <input type="text" required>
+                <input type="text" name="firstname" required>
+                <div id="firstname_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="other-names">Other names</label>
-                <input type="text">
+                <input type="text" name="othernames">
             </div>
 
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select name="" id="" required>
+                <select name="" id="" name="gender" required>
                     <option value="">Select</option>
                     <option value="">Male</option>
                     <option value="">Female</option>
+                    <div id="gender_error" class="val_error"></div>    
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="dbirth">Date of birth</label>
-                <input type="date" name="bdaymonth" required>
-            
+                <input type="date" name="dbirth" required>
+                <div id="dbirth_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" name="emailaddress" required>
+                <input type="email" name="email" required>
+                <div id="email_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="number">Phone number</label>
-                <input type="number" maxlength="11" required>
+                <input type="number" maxlength="11" name="number" required>
+                <div id="pnumber_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="">Contact Address</label>
-                <input type="text" required>
+                <input type="text" name="caddress" required>
+                <div id="caddress_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="">Permanent Address</label>
-                <input type="text" required>
+                <input type="text" name="paddress" required>
+                <div id="padress_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
@@ -101,12 +108,13 @@
                     <option value="engaged">Engaged</option>
                     <option value="Married">Married</option> 
                     <option value="divorced">Divorced</option>
-            </select> 
+            </select>
+            <div id="status_error" class="val_error"></div> 
             </div>
 
             <div class="form-group">
                 <label for="">State of origin</label>
-                <select id="statee" name="state" required>
+                <select id="statee" name="origin" required>
                     <option value="none">Select</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
@@ -146,11 +154,12 @@
                     <option value="Zamfara">Zamfara</option>
                     <option value="FCT">FCT</option>
                 </select>
+                <div id="origin_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="">State of residence</label>
-                <select id="statee" name="state" required>
+                <select id="statee" name="residence" required>
                         <option value="none">Select</option>
                         <option value="Abia">Abia</option>
                         <option value="Adamawa">Adamawa</option>
@@ -190,11 +199,11 @@
                         <option value="Zamfara">Zamfara</option>
                         <option value="FCT">FCT</option>
                     </select>
-                
+                    <div id="residence_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
-                <label for="" id="LGA" name="LG">Local Government Area</label>
+                <label for="" id="LGA" name="lgovt">Local Government Area</label>
                 <select name="LGA" id="LG" required>
                     <option value="none">Select</option>
                     <option value="Akoko North-East">Akoko North-East</option>
@@ -216,12 +225,13 @@
                     <option value="">Ose</option>
                     <option value="">Owo</option>
                 </select>
+                <div id="lgovt_error" class="val_error"></div>
                           
             </div>
 
             <div class="form-group">
                 <label for="">Area of Expertise</label>
-                <select name="" id="expertise" required>
+                <select name="expertise" id="expertise" required>
                     <option value="">Select</option>
                     <option value="">Plumbing</option>
                     <option value="">Painting</option>
@@ -236,7 +246,9 @@
                     <option value="">Home tutor</option>
                     <option value="">Event Ushers</option>
                     <option value="">Researcher</option>
+                    <option value="">Others</option>
                 </select>
+                <div id="expertise_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
@@ -246,18 +258,22 @@
 
             <div class="form-group">
                 <label for="">Years of Experience</label>
-                <input type="number" required>
+                <input type="number" name="experience" required>
+                <div id="experience_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="">What's your ICT level</label>
-                <select name="proficiency-level" id="">
+                <select name="ict" id="">
                     <option value="">Select</option>
                     <option value="">Basic</option>
                     <option value="">Intermediate</option>
                     <option value="">Advanced</option>
                 </select>
+                <div id="ict_error" class="val_error"></div>
             </div>
+<!--
+
 
             <div class="form-group">
                 <label for="">Bank Name</label>
@@ -309,14 +325,18 @@
                 <label for="idUpload">Upload ID</label>
                 <input type="file" required>
             </div>
+-->
+            
             <div class="form-group">
                 <label for="">Password</label>
-                <input type="password" id="password" required>
+                <input type="password" name="pass" id="password" required>
+                <div id="pass_error" class="val_error"></div>
             </div>
 
             <div class="form-group">
                 <label for="">Confirm Password</label>
-                <input type="password" id="cpassword" required>
+                <input type="password" name="cpass" id="cpassword" required>
+                <div id="cpass_error" class="val_error"></div>
             </div>
 
         
@@ -331,11 +351,328 @@
 </body>
 
 <script type="text/javascript">
-    var pass = document.getElementById("password").value;
-    var cpass =document.getElementById("cpassword").value;
-    if (pass === cpass){
-        
+   var surname = document.forms["vform"]["surname"];
+   var firstname = document.forms["vform"]["firstname"];
+   var gender = document.forms["vform"]["gender"];
+   var dbirth = document.forms["vform"]["bdaymonth"];
+   var email = document.forms["vform"]["email"];
+   var number = document.forms["vform"]["number"];
+   var caddress = document.forms["vform"]["caddress"];
+   var paddress = document.forms["vform"]["paddress"];
+   var status = document.forms["vform"]["status"];
+   var origin = document.forms["vform"]["sorigin"];
+   var residence = document.forms["vform"]["residence"];
+   var lg = document.forms["vform"]["lgovt"];
+   var expertise = document.forms["vform"]["expertise"];
+   var experience = document.forms["vform"]["experience"];
+   var ict = document.forms["vform"]["ict"];
+   var pass = document.forms["vform"]["pass"]; 
+   var cpass = document.forms["vform"]["cpass"];
+
+
+
+   var surname_error =document.getElementById("surname_error");
+   var firstname_error =document.getElementById("firstname_error");
+   var gender_error =document.getElementById("gender_error");
+   var dbirth_error =document.getElementById("dbirth_error");
+   var pnumber_error =document.getElementById("pnumber_error");
+   var email_error =document.getElementById("email_error");
+   var caddress_error =document.getElementById("caddress_error");
+   var paddress_error =document.getElementById("paddress_error");
+   var status_error =document.getElementById("status_error");
+   var origin_error =document.getElementById("origin_error");
+   var residence_error =document.getElementById("residence_error");
+   var experience_error =document.getElementById("experience_error");
+   var expertise_error =document.getElementById("expertise_error");
+   var lgovt_error =document.getElementById("lgovt_error");
+   var ict_error =document.getElementById("ict_error");
+   var pass_error =document.getElementById("pass_error");
+   var cpass_error =document.getElementById("cpass_error");
+
+
+  surname.addEventListener("blur", surnameVerify, true);
+  firstname.addEventListener("blur", firstnameVerify, true);
+  gender.addEventListener("blur", genderVerify, true);
+  dbirth.addEventListener("blur", dbirthVerify, true);
+  pnumber.addEventListener("blur", pnumberVerify, true);
+  email.addEventListener("blur", emailVerify, true);
+  caddress.addEventListener("blur", caddressVerify, true);
+  paddress.addEventListener("blur", paddressVerify, true);
+  status.addEventListener("blur", statusVerify, true);
+  origin.addEventListener("blur", originVerify, true);
+  residence.addEventListener("blur", residenceVerify, true);
+  experience.addEventListener("blur", experienceVerify, true);
+  lgovt.addEventListener("blur", lgovtVerify, true);
+  ict.addEventListener("blur", ictVerify, true);
+  pass.addEventListener("blur", passVerify, true);
+  cpass.addEventListener("blur", cpassVerify, true);
+
+
+
+  function validate() {
+    if (surname.value == "") {
+      surname.style.border = "1px solid red";
+      surname_error.textContent = "Surname is required";
+      surname.focus();
+      return false;
     }
+
+    if (firstame.value == "") {
+      firstame.style.border = "1px solid red";
+      firstame_error.textContent = "firstame is required";
+      firstame.focus();
+      return false;
+    }
+
+    if (firstame.value == "") {
+      firstame.style.border = "1px solid red";
+      firstame_error.textContent = "firstame is required";
+      firstame.focus();
+      return false;
+    }
+
+    if (gender.value == "") {
+      gender.style.border = "1px solid red";
+      gender_error.textContent = "gender is required";
+      gender.focus();
+      return false;
+    }
+
+    if (bdaymonth.value == "") {
+      bdaymonth.style.border = "1px solid red";
+      dbirth_error.textContent = "Enter your Date of birth";
+      bdaymonth.focus();
+      return false;
+    }
+
+    if (pnumber.value == "") {
+      pnumber.style.border = "1px solid red";
+      pnumber_error.textContent = "Enter your Phone number";
+      pnumber.focus();
+      return false;
+    }
+
+    if (caddress.value == "") {
+      caddress.style.border = "1px solid red";
+      caddress_error.textContent = "Contact address is required";
+      caddress.focus();
+      return false;
+    }
+
+    if (paddress.value == "") {
+      paddress.style.border = "1px solid red";
+      paddress_error.textContent = "Permanent address is required";
+      paddress.focus();
+      return false;
+    }
+
+    if (email.value == "") {
+      email.style.border = "1px solid red";
+      email_error.textContent = "Email is required";
+      email.focus();
+      return false;
+    }
+
+    if (origin.value == "") {
+      origin.style.border = "1px solid red";
+      origin_error.textContent = "State of origin is required";
+      origin.focus();
+      return false;
+    }
+
+    if (residence.value == "") {
+      residence.style.border = "1px solid red";
+      residence_error.textContent = "State of residence is required";
+      residence.focus();
+      return false;
+    }
+
+    if (status.value == "") {
+      status.style.border = "1px solid red";
+      status_error.textContent = "Marital status is required";
+      status.focus();
+      return false;
+    }
+
+    if (lgovt.value == "") {
+      lgovt.style.border = "1px solid red";
+      lgovt_error.textContent = "Local Government Area is required";
+      lgovt.focus();
+      return false;
+    }
+
+    
+
+    if (expertise.value == "") {
+      expertise.style.border = "1px solid red";
+      expertise_error.textContent = "Area of expertise is required";
+      expertise.focus();
+      return false;
+    }
+
+    if (experience.value == "") {
+      experience.style.border = "1px solid red";
+      experience_error.textContent = "Level of experience is required";
+      experience.focus();
+      return false;
+    }
+
+    if (ict.value == "") {
+      ict.style.border = "1px solid red";
+      ict_error.textContent = "Level of ICT is required";
+      ict.focus();
+      return false;
+    }
+
+    if (expertise.value == "") {
+      expertise.style.border = "1px solid red";
+      expertise_error.textContent = "Area of expertise is required";
+      expertise.focus();
+      return false;
+    }
+
+    if (pass.value == "") {
+      pass.style.border = "1px solid red";
+      pass_error.textContent = "Password is required";
+      pass.focus();
+      return false;
+    }
+
+    if (cpass.value == "") {
+      cpass.style.border = "1px solid red";
+      cpass_error.textContent = "Confirmation password is required";
+      cpass.focus();
+      return false;
+    }
+
+    if (pass.value != c[ass.value]) {
+        pass.style.border = "1px solid red";
+        cpass.style.border = "1px solid red";
+        pass_error.innerHTML = "The two passwords do not match";
+    }
+  }
+
+
+function surnameVerify(){
+    if (surname.value != "") {
+    surname.style.border = "1px solid red";
+    surname_error.innerHTML
+    return true;
+  }
+}
+
+function firstnameVerify(){
+    if (firstname.value != ""){
+    firstname.style.border = "1px solid red";
+    firstname_error.innerHTML
+    return true;
+  }   
+}
+
+function emailVerify(){
+    if (email.value != ""){
+    email.style.border = "1px solid red";
+    email_error.innerHTML
+    return true;
+  }
+}
+
+function genderVerify(){
+    if (gender.value != ""){
+    gender.style.border = "1px solid red";
+    gender_error.innerHTML
+    return true;
+  }
+}
+
+function caddressVerify(){
+    if (caddress.value != ""){ 
+    caddress.style.border = "1px solid red";
+    caddress_error.innerHTML
+    return true;
+  }
+}
+
+function paddressVerify(){
+    if (paddress.value != ""){
+    paddress.style.border = "1px solid red";
+    paddress_error.innerHTML
+    return true;
+  }
+}
+
+function genderVerify(){
+    if (gender.value != ""){
+    gender.style.border = "1px solid red";
+    gender_error.innerHTML
+    return true;
+  }
+}
+
+function statusVerify(){
+    if (status.value != ""){
+    status.style.border = "1px solid red";
+    status_error.innerHTML
+    return true;
+  }  
+}
+
+function originVerify(){
+    if (origin.value != ""){
+    origin.style.border = "1px solid red";
+    origin_error.innerHTML
+    return true;
+  }  
+}
+
+function residenceVerify(){
+    if (residence.value != ""){
+    residence.style.border = "1px solid red";
+    residence_error.innerHTML
+    return true;
+  }
+}
+
+function lgovtVerify(){
+    if (lgovt.value != ""){
+    lgovt.style.border = "1px solid red";
+    lgovt_error.innerHTML
+    return true;
+  }
+}
+
+function experienceVerify(){
+    if (experience.value != ""){
+    experience.style.border = "1px solid red";
+    experience_error.innerHTML
+    return true;
+  } 
+}
+
+function ictVerify(){
+    if (ict.value != ""){ 
+    ict.style.border = "1px solid red";
+    ict_error.innerHTML
+    return true;
+  }
+}
+
+function passVerify(){
+    if (pass.value != ""){
+    pass.style.border = "1px solid red";
+    pass_error.innerHTML
+    return true;
+  }
+}
+
+function cpassVerify(){
+    if (cpass.value != ""){
+    cpass.style.border = "1px solid red";
+    cpass_error.innerHTML
+    return true;
+  } 
+}
+
 </script>
 
 </html>
