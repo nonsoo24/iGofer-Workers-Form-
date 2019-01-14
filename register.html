@@ -340,7 +340,8 @@
             </div>
 
         
-        <button name="submit" class="button">Submit</button>
+        <button type="submit"  class="button">Submit</button>
+
         </form>
         </div>
     </div>
@@ -549,6 +550,7 @@
         pass.style.border = "1px solid red";
         cpass.style.border = "1px solid red";
         pass_error.innerHTML = "The two passwords do not match";
+        return false;
     }
   }
 

@@ -44,9 +44,13 @@ body{
     width: 80%;
  }
 
+ .val_error{
+    color: #ff1f1f;
+ }
+
  
  .button{
-   background-color: rgba(247, 115, 7, 0.979);
+   background-color:  black; 
    color: #fff;
    padding: 10px 15px;
    border: none;
@@ -54,7 +58,7 @@ body{
  }
 
  .button:hover{
-    background: black;
+    background: rgba(247, 115, 7, 0.979);
     color: white;
 
  }
@@ -64,5 +68,27 @@ body{
     width: 100%;
     
  }
+
+
+
+
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
 
  
