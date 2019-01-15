@@ -9,27 +9,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script src="main.js"></script>
 </head>
 <body>
         <header class="fixed-top scroll-change">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top">
-                  <a class="navbar-brand" href="igofer.html"><img src="img/logo.jpg" alt="logo" class="logo"></a>
+                  <a class="navbar-brand" href="register.html"><img src="img/logo.jpg" alt="logo" class="logo"></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="igofer.html"><strong>Home </strong><span class="sr-only">(current)</span></a>
-                      </li>
-                  
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><strong>Contact Us</strong></a>
-                      </li>
-                     
-                </div>
+            
                 </nav>
                 </header>
                 
@@ -42,17 +30,23 @@
 
     <div class="form">
         
-        <form action="index.html" method="post" onsubmit="return validate()" name="vform">
+        
             <div class="form-group">
                 <label for="surname">Surname</label>
-                <input type="text" name="surname" required>
-                <div id="surname_error" class="val_error"></div>
+                <input type="text" name="surname" id="" required>
+                <div id="surname_error" class="val_error">
+                    <i class="fas fa-times-circle">Enter Surname</i>
+                </div>
+                <div id="no_number" class="val_error">
+                    <i class="fas fa-times-circle">This field should contain only text.</i>
+                </div>
+                    
             </div>
             
             <div class="form-group">
                 <label for="first-name">First name</label>
                 <input type="text" name="firstname" required>
-                <div id="firstname_error" class="val_error"></div>
+                <div id="firstname_error" class="val_error"><i class="fas fa-times-circle">Enter First name</i></div>
             </div>
 
             <div class="form-group">
@@ -62,60 +56,60 @@
 
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select name="" id="" name="gender" required>
+                <select id="" name="gender" required>
                     <option value="">Select</option>
-                    <option value="">Male</option>
-                    <option value="">Female</option>
-                    <div id="gender_error" class="val_error"></div>    
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>    
                 </select>
+                <div id="gender_error" class="val_error"><i class="fas fa-times-circle"></i>Select Gender</div>
             </div>
 
             <div class="form-group">
                 <label for="dbirth">Date of birth</label>
                 <input type="date" name="dbirth" required>
-                <div id="dbirth_error" class="val_error"></div>
+                <div id="dbirth_error" class="val_error"><i class="fas fa-times-circle">Enter Date of birth</i></div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" required>
-                <div id="email_error" class="val_error"></div>
+                <div id="email_error" class="val_error"><i class="fas fa-times-circle">Enter of email address</i></div>
             </div>
 
             <div class="form-group">
                 <label for="number">Phone number</label>
                 <input type="number" maxlength="11" name="number" required>
-                <div id="pnumber_error" class="val_error"></div>
+                <div id="pnumber_error" class="val_error"><i class="fas fa-times-circle">Enter phone number</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">Contact Address</label>
                 <input type="text" name="caddress" required>
-                <div id="caddress_error" class="val_error"></div>
+                <div id="caddress_error" class="val_error"><i class="fas fa-times-circle">Enter contact address</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">Permanent Address</label>
                 <input type="text" name="paddress" required>
-                <div id="padress_error" class="val_error"></div>
+                <div id="paddress_error" class="val_error"><i class="fas fa-times-circle">Enter permanent address</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">Marital status</label>
                 <select id="Marital-status" name="status" required>
-                    <option value="none">Select</option>
-                    <option value="single">Single</option>
-                    <option value="engaged">Engaged</option>
+                    <option value="">Select</option>
+                    <option value="Single">Single</option>
+                    <option value="Engaged">Engaged</option>
                     <option value="Married">Married</option> 
-                    <option value="divorced">Divorced</option>
+                    <option value="Divorced">Divorced</option>
             </select>
-            <div id="status_error" class="val_error"></div> 
+            <div id="status_error" class="val_error">Select marital status<i class="fas fa-times-circle"></i></div> 
             </div>
 
             <div class="form-group">
                 <label for="">State of origin</label>
                 <select id="statee" name="origin" required>
-                    <option value="none">Select</option>
+                    <option value="">Select</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
                     <option value="Akwa Ibom">Akwa Ibom</option>
@@ -136,8 +130,8 @@
                     <option value="Kaduna">Kaduna</option>
                     <option value="Kano">Kano</option>
                     <option value="Katsina">Katsina</option>
-                    <option value="">Kebbi</option>
-                    <option value="Kebbi">Kogi</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
                     <option value="Kwara">Kwara</option>
                     <option value="Lagos">Lagos</option>
                     <option value="Nasarawa">Nasarawa</option>
@@ -154,13 +148,13 @@
                     <option value="Zamfara">Zamfara</option>
                     <option value="FCT">FCT</option>
                 </select>
-                <div id="origin_error" class="val_error"></div>
+                <div id="origin_error" class="val_error"><i class="fas fa-times-circle">Select state</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">State of residence</label>
                 <select id="statee" name="residence" required>
-                        <option value="none">Select</option>
+                        <option value="">Select</option>
                         <option value="Abia">Abia</option>
                         <option value="Adamawa">Adamawa</option>
                         <option value="Akwa Ibom">Akwa Ibom</option>
@@ -181,8 +175,8 @@
                         <option value="Kaduna">Kaduna</option>
                         <option value="Kano">Kano</option>
                         <option value="Katsina">Katsina</option>
-                        <option value="">Kebbi</option>
-                        <option value="Kebbi">Kogi</option>
+                        <option value="kebbi">Kebbi</option>
+                        <option value="kogi">Kogi</option>
                         <option value="Kwara">Kwara</option>
                         <option value="Lagos">Lagos</option>
                         <option value="Nasarawa">Nasarawa</option>
@@ -199,13 +193,13 @@
                         <option value="Zamfara">Zamfara</option>
                         <option value="FCT">FCT</option>
                     </select>
-                    <div id="residence_error" class="val_error"></div>
+                    <div id="residence_error" class="val_error"><i class="fas fa-times-circle">Select state</i></div>
             </div>
 
             <div class="form-group">
                 <label for="" id="LGA" name="lgovt">Local Government Area</label>
                 <select name="LGA" id="LG" required>
-                    <option value="none">Select</option>
+                    <option value="">Select</option>
                     <option value="Akoko North-East">Akoko North-East</option>
                     <option value="Akoko North-West">Akoko North-West</option>
                     <option value="Akoko South-East">Akoko South-East</option>
@@ -214,18 +208,18 @@
                     <option value="Akure South">Akure South</option>
                     <option value="Ese Odr">Ese Odo</option>
                     <option value="Idanre">Idanre</option>
-                    <option value="">Ifedore</option>
-                    <option value="">Ilaje</option>
-                    <option value="">Ile Oluji/Okeigbo</option>
-                    <option value="">Irele</option>
-                    <option value="">Odigbo</option>
-                    <option value="">Okitipupa</option>
-                    <option value="">Ondo East</option>
-                    <option value="">Ondo West</option>
-                    <option value="">Ose</option>
-                    <option value="">Owo</option>
+                    <option value="ifedore">Ifedore</option>
+                    <option value="ilaje">Ilaje</option>
+                    <option value="ile-oluji">Ile Oluji/Okeigbo</option>
+                    <option value="irele">Irele</option>
+                    <option value="odigbo">Odigbo</option>
+                    <option value="okitipupa">Okitipupa</option>
+                    <option value="ondo-east">Ondo East</option>
+                    <option value="ondo-west">Ondo West</option>
+                    <option value="ose">Ose</option>
+                    <option value="owo">Owo</option>
                 </select>
-                <div id="lgovt_error" class="val_error"></div>
+                <div id="lgovt_error" class="val_error"><i class="fas fa-times-circle">Select LGA</i></div>
                           
             </div>
 
@@ -248,7 +242,7 @@
                     <option value="">Researcher</option>
                     <option value="">Others</option>
                 </select>
-                <div id="expertise_error" class="val_error"></div>
+                <div id="expertise_error" class="val_error"><i class="fas fa-times-circle"> Select area of expertise</i></div>
             </div>
 
             <div class="form-group">
@@ -259,18 +253,18 @@
             <div class="form-group">
                 <label for="">Years of Experience</label>
                 <input type="number" name="experience" required>
-                <div id="experience_error" class="val_error"></div>
+                <div id="experience_error" class="val_error"><i class="fas fa-times-circle">Enter year(s) of experience</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">What's your ICT level</label>
                 <select name="ict" id="">
                     <option value="">Select</option>
-                    <option value="">Basic</option>
-                    <option value="">Intermediate</option>
-                    <option value="">Advanced</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
                 </select>
-                <div id="ict_error" class="val_error"></div>
+                <div id="ict_error" class="val_error"><i class="fas fa-times-circle">Select ICT level</i></div>
             </div>
 <!--
 
@@ -330,351 +324,22 @@
             <div class="form-group">
                 <label for="">Password</label>
                 <input type="password" name="pass" id="password" required>
-                <div id="pass_error" class="val_error"></div>
+                <div id="pass_error" class="val_error"><i class="fas fa-times-circle">Enter password</i></div>
             </div>
 
             <div class="form-group">
                 <label for="">Confirm Password</label>
                 <input type="password" name="cpass" id="cpassword" required>
-                <div id="cpass_error" class="val_error"></div>
+                <div id="cpass_error" class="val_error"><i class="fas fa-times-circle">Confirm your password</i></div>
             </div>
 
         
-        <button type="submit"  class="button">Submit</button>
-
-        </form>
+         <button type="submit" class="button" id="form_submit">Submit</button>
         </div>
     </div>
 </div>   
 
    
-
+<script src="register.js"></script>
 </body>
-
-<script type="text/javascript">
-   var surname = document.forms["vform"]["surname"];
-   var firstname = document.forms["vform"]["firstname"];
-   var gender = document.forms["vform"]["gender"];
-   var dbirth = document.forms["vform"]["bdaymonth"];
-   var email = document.forms["vform"]["email"];
-   var number = document.forms["vform"]["number"];
-   var caddress = document.forms["vform"]["caddress"];
-   var paddress = document.forms["vform"]["paddress"];
-   var status = document.forms["vform"]["status"];
-   var origin = document.forms["vform"]["sorigin"];
-   var residence = document.forms["vform"]["residence"];
-   var lg = document.forms["vform"]["lgovt"];
-   var expertise = document.forms["vform"]["expertise"];
-   var experience = document.forms["vform"]["experience"];
-   var ict = document.forms["vform"]["ict"];
-   var pass = document.forms["vform"]["pass"]; 
-   var cpass = document.forms["vform"]["cpass"];
-
-
-
-   var surname_error =document.getElementById("surname_error");
-   var firstname_error =document.getElementById("firstname_error");
-   var gender_error =document.getElementById("gender_error");
-   var dbirth_error =document.getElementById("dbirth_error");
-   var pnumber_error =document.getElementById("pnumber_error");
-   var email_error =document.getElementById("email_error");
-   var caddress_error =document.getElementById("caddress_error");
-   var paddress_error =document.getElementById("paddress_error");
-   var status_error =document.getElementById("status_error");
-   var origin_error =document.getElementById("origin_error");
-   var residence_error =document.getElementById("residence_error");
-   var experience_error =document.getElementById("experience_error");
-   var expertise_error =document.getElementById("expertise_error");
-   var lgovt_error =document.getElementById("lgovt_error");
-   var ict_error =document.getElementById("ict_error");
-   var pass_error =document.getElementById("pass_error");
-   var cpass_error =document.getElementById("cpass_error");
-
-
-  surname.addEventListener("blur", surnameVerify, true);
-  firstname.addEventListener("blur", firstnameVerify, true);
-  gender.addEventListener("blur", genderVerify, true);
-  dbirth.addEventListener("blur", dbirthVerify, true);
-  pnumber.addEventListener("blur", pnumberVerify, true);
-  email.addEventListener("blur", emailVerify, true);
-  caddress.addEventListener("blur", caddressVerify, true);
-  paddress.addEventListener("blur", paddressVerify, true);
-  status.addEventListener("blur", statusVerify, true);
-  origin.addEventListener("blur", originVerify, true);
-  residence.addEventListener("blur", residenceVerify, true);
-  experience.addEventListener("blur", experienceVerify, true);
-  lgovt.addEventListener("blur", lgovtVerify, true);
-  ict.addEventListener("blur", ictVerify, true);
-  pass.addEventListener("blur", passVerify, true);
-  cpass.addEventListener("blur", cpassVerify, true);
-
-
-
-  function validate() {
-    if (surname.value == "") {
-      surname.style.border = "1px solid red";
-      surname_error.textContent = "Surname is required";
-      surname.focus();
-      return false;
-    }
-
-    if (firstame.value == "") {
-      firstame.style.border = "1px solid red";
-      firstame_error.textContent = "firstame is required";
-      firstame.focus();
-      return false;
-    }
-
-    if (firstame.value == "") {
-      firstame.style.border = "1px solid red";
-      firstame_error.textContent = "firstame is required";
-      firstame.focus();
-      return false;
-    }
-
-    if (gender.value == "") {
-      gender.style.border = "1px solid red";
-      gender_error.textContent = "gender is required";
-      gender.focus();
-      return false;
-    }
-
-    if (bdaymonth.value == "") {
-      bdaymonth.style.border = "1px solid red";
-      dbirth_error.textContent = "Enter your Date of birth";
-      bdaymonth.focus();
-      return false;
-    }
-
-    if (pnumber.value == "") {
-      pnumber.style.border = "1px solid red";
-      pnumber_error.textContent = "Enter your Phone number";
-      pnumber.focus();
-      return false;
-    }
-
-    if (caddress.value == "") {
-      caddress.style.border = "1px solid red";
-      caddress_error.textContent = "Contact address is required";
-      caddress.focus();
-      return false;
-    }
-
-    if (paddress.value == "") {
-      paddress.style.border = "1px solid red";
-      paddress_error.textContent = "Permanent address is required";
-      paddress.focus();
-      return false;
-    }
-
-    if (email.value == "") {
-      email.style.border = "1px solid red";
-      email_error.textContent = "Email is required";
-      email.focus();
-      return false;
-    }
-
-    if (origin.value == "") {
-      origin.style.border = "1px solid red";
-      origin_error.textContent = "State of origin is required";
-      origin.focus();
-      return false;
-    }
-
-    if (residence.value == "") {
-      residence.style.border = "1px solid red";
-      residence_error.textContent = "State of residence is required";
-      residence.focus();
-      return false;
-    }
-
-    if (status.value == "") {
-      status.style.border = "1px solid red";
-      status_error.textContent = "Marital status is required";
-      status.focus();
-      return false;
-    }
-
-    if (lgovt.value == "") {
-      lgovt.style.border = "1px solid red";
-      lgovt_error.textContent = "Local Government Area is required";
-      lgovt.focus();
-      return false;
-    }
-
-    
-
-    if (expertise.value == "") {
-      expertise.style.border = "1px solid red";
-      expertise_error.textContent = "Area of expertise is required";
-      expertise.focus();
-      return false;
-    }
-
-    if (experience.value == "") {
-      experience.style.border = "1px solid red";
-      experience_error.textContent = "Level of experience is required";
-      experience.focus();
-      return false;
-    }
-
-    if (ict.value == "") {
-      ict.style.border = "1px solid red";
-      ict_error.textContent = "Level of ICT is required";
-      ict.focus();
-      return false;
-    }
-
-    if (expertise.value == "") {
-      expertise.style.border = "1px solid red";
-      expertise_error.textContent = "Area of expertise is required";
-      expertise.focus();
-      return false;
-    }
-
-    if (pass.value == "") {
-      pass.style.border = "1px solid red";
-      pass_error.textContent = "Password is required";
-      pass.focus();
-      return false;
-    }
-
-    if (cpass.value == "") {
-      cpass.style.border = "1px solid red";
-      cpass_error.textContent = "Confirmation password is required";
-      cpass.focus();
-      return false;
-    }
-
-    if (pass.value != c[ass.value]) {
-        pass.style.border = "1px solid red";
-        cpass.style.border = "1px solid red";
-        pass_error.innerHTML = "The two passwords do not match";
-        return false;
-    }
-  }
-
-
-function surnameVerify(){
-    if (surname.value != "") {
-    surname.style.border = "1px solid red";
-    surname_error.innerHTML
-    return true;
-  }
-}
-
-function firstnameVerify(){
-    if (firstname.value != ""){
-    firstname.style.border = "1px solid red";
-    firstname_error.innerHTML
-    return true;
-  }   
-}
-
-function emailVerify(){
-    if (email.value != ""){
-    email.style.border = "1px solid red";
-    email_error.innerHTML
-    return true;
-  }
-}
-
-function genderVerify(){
-    if (gender.value != ""){
-    gender.style.border = "1px solid red";
-    gender_error.innerHTML
-    return true;
-  }
-}
-
-function caddressVerify(){
-    if (caddress.value != ""){ 
-    caddress.style.border = "1px solid red";
-    caddress_error.innerHTML
-    return true;
-  }
-}
-
-function paddressVerify(){
-    if (paddress.value != ""){
-    paddress.style.border = "1px solid red";
-    paddress_error.innerHTML
-    return true;
-  }
-}
-
-function genderVerify(){
-    if (gender.value != ""){
-    gender.style.border = "1px solid red";
-    gender_error.innerHTML
-    return true;
-  }
-}
-
-function statusVerify(){
-    if (status.value != ""){
-    status.style.border = "1px solid red";
-    status_error.innerHTML
-    return true;
-  }  
-}
-
-function originVerify(){
-    if (origin.value != ""){
-    origin.style.border = "1px solid red";
-    origin_error.innerHTML
-    return true;
-  }  
-}
-
-function residenceVerify(){
-    if (residence.value != ""){
-    residence.style.border = "1px solid red";
-    residence_error.innerHTML
-    return true;
-  }
-}
-
-function lgovtVerify(){
-    if (lgovt.value != ""){
-    lgovt.style.border = "1px solid red";
-    lgovt_error.innerHTML
-    return true;
-  }
-}
-
-function experienceVerify(){
-    if (experience.value != ""){
-    experience.style.border = "1px solid red";
-    experience_error.innerHTML
-    return true;
-  } 
-}
-
-function ictVerify(){
-    if (ict.value != ""){ 
-    ict.style.border = "1px solid red";
-    ict_error.innerHTML
-    return true;
-  }
-}
-
-function passVerify(){
-    if (pass.value != ""){
-    pass.style.border = "1px solid red";
-    pass_error.innerHTML
-    return true;
-  }
-}
-
-function cpassVerify(){
-    if (cpass.value != ""){
-    cpass.style.border = "1px solid red";
-    cpass_error.innerHTML
-    return true;
-  } 
-}
-
-</script>
-
 </html>
