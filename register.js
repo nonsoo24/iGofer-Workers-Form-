@@ -314,15 +314,15 @@
 // return true;
 // } 
 // }
-var regex = /^[A-Za-z]+$/;
-var inputList = document.getElementsByTagName("input");
-var selectList = document.getElementsByTagName("select");
+// var regex = /^[A-Za-z]+$/;
+// var inputList = document.getElementsByTagName("input");
+// var selectList = document.getElementsByTagName("select");
 
 var surnameValidate = document.getElementById("surname_error");
 surnameValidate.style.display = "none";
 
-var noNumberValidate = document.getElementById("no_number");
-noNumberValidate.style.display = "none";
+// var noNumberValidate = document.getElementById("no_number");
+// noNumberValidate.style.display = "none";
 
 var firstnameValidate = document.getElementById("firstname_error");
 firstnameValidate.style.display = "none";
@@ -376,13 +376,13 @@ cpassValidate.style.display = "none";
 document.getElementById("form_submit").addEventListener("click", function(){
     if(inputList[0].value === ""){
         surnameValidate.style.display = "block";
+    } else{
+        surnameValidate.style.display = "none";
    // } else if((inputList[0].value != "")){
      //   if(!regex.test(inputList[0].value)){
        //     noNumberValidate.style.display = "block";
        // }
        // noNumberValidate.style.display = "none";
-    } else{
-        surnameValidate.style.display = "none";
     }
     if(inputList[1].value === ""){
         firstnameValidate.style.display = "block";
